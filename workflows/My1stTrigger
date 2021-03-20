@@ -1,0 +1,15 @@
+on:
+  reddit:
+    url: https://www.reddit.com/user/MrWhoCaresIt/upvoted/
+jobs:
+  print:
+    name: Printhttps://github.com/Bgmn-me/Reddit-to-Google_Drive
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Outputs
+        env:
+          title: ${{on.reddit.outputs.title}}
+          link: ${{on.reddit.outputs.permalink}}
+        run: |
+          echo title: $title
+          echo link: $link
